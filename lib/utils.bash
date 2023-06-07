@@ -36,24 +36,24 @@ list_all_versions() {
 }
 
 get_platform() {
-  uname | tr '[:upper:]' '[:lower:]'
+	uname | tr '[:upper:]' '[:lower:]'
 }
 
 get_arch() {
-  case "$(uname -m)" in
+	case "$(uname -m)" in
 
-    x86_64)
-      echo "amd64"
-      ;;
+	x86_64)
+		echo "amd64"
+		;;
 
-    arm64 | aarch64)
-      echo "arm64"
-      ;;
+	arm64 | aarch64)
+		echo "arm64"
+		;;
 
-    *)
-      echo "amd64"
-      ;;
-  esac
+	*)
+		echo "amd64"
+		;;
+	esac
 }
 
 download_release() {
