@@ -3,8 +3,8 @@
 set -euo pipefail
 
 GH_REPO="https://github.com/CircleCI-Public/circleci-cli"
-TOOL_NAME="circleci-cli"
-TOOL_TEST="circleci-cli --help"
+TOOL_NAME="circleci"
+TOOL_TEST="circleci --help"
 
 fail() {
 	echo -e "asdf-$TOOL_NAME: $*"
