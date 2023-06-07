@@ -35,13 +35,35 @@ list_all_versions() {
 	list_github_tags
 }
 
+get_platform() {
+  uname | tr '[:upper:]' '[:lower:]'
+}
+
+get_arch() {
+  case "$(uname -m)" in
+
+    x86_64)
+      echo "amd64"
+      ;;
+
+    arm64 | aarch64)
+      echo "arm64_static"
+      ;;
+
+    *)
+      echo "amd64"
+      ;;
+  esac
+}
+
 download_release() {
 	local version filename url
 	version="$1"
 	filename="$2"
+	platform="$(get_platform)"
+	arch="$(get_arch)"
 
-	# TODO: Adapt the release URL convention for circleci-cli
-	url="$GH_REPO/archive/ciecleci-cli_${version}_darwin_amd64.tar.gz"
+	url="${GH_REPO}/releases/download/v${version}/circleci-cli_${version}_${platform}_${arch}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
