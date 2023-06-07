@@ -15,10 +15,7 @@
 
 # Dependencies
 
-**TODO: adapt this section**
-
 - `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
 
 # Install
 
@@ -42,8 +39,8 @@ asdf install circleci-cli latest
 # Set a version globally (on your ~/.tool-versions file)
 asdf global circleci-cli latest
 
-# Now circleci-cli commands are available
-circleci-cli --help
+# Now circleci commands are available
+circleci --help
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
