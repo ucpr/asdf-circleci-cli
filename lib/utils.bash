@@ -2,7 +2,6 @@
 
 set -euo pipefail
 
-# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for circleci-cli.
 GH_REPO="https://github.com/CircleCI-Public/circleci-cli"
 TOOL_NAME="circleci-cli"
 TOOL_TEST="circleci-cli --help"
@@ -42,7 +41,7 @@ download_release() {
 	filename="$2"
 
 	# TODO: Adapt the release URL convention for circleci-cli
-	url="$GH_REPO/archive/v${version}.tar.gz"
+	url="$GH_REPO/archive/ciecleci-cli_${version}_darwin_amd64.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
