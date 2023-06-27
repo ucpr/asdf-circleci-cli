@@ -2,7 +2,7 @@
 
 # asdf-circleci-cli [![Build](https://github.com/ucpr/asdf-circleci-cli/actions/workflows/build.yml/badge.svg)](https://github.com/ucpr/asdf-circleci-cli/actions/workflows/build.yml) [![Lint](https://github.com/ucpr/asdf-circleci-cli/actions/workflows/lint.yml/badge.svg)](https://github.com/ucpr/asdf-circleci-cli/actions/workflows/lint.yml)
 
-[circleci-cli](https://github.com/ucpr/circleci-cli) plugin for the [asdf version manager](https://asdf-vm.com).
+[circleci-cli](https://github.com/CircleCI-Public/circleci-cli) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
